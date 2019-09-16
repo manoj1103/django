@@ -1,0 +1,16 @@
+<html>
+<body>
+    <UL>
+        {% for item in items %}
+            <a href="{% url 'update_item' item.id %}">
+                <li> {{item.EMPLOYEE_NAME}</li>
+
+            </a>
+        {% endfor %}
+
+    </UL>
+    <a href="{% url 'create_items' %}">New item</a>
+
+
+</body>
+</html>

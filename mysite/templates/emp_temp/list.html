@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<
+<html lang="en" xmlns:background-image="http://www.w3.org/1999/xhtml">
+<body bgcolor="#D8EFFF" > </body>
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <h1><i><center><font color = 'blue'>LIST OF EMP_DETAILS</font></center></i></h1>
+
+</head>
+<body>
+
+   <p><a href='/create/ '><font color = 'green'><font size = '5'>New item</font></font></a></p>
+
+    <ul>
+        {% for item in item %}
+        <a href ='/update/{{ item.EMP_ID }}'><font size = "5">edit </font> </a> ---- <a href ='/delete/{{ item.EMP_ID }}'><font size = "5"><font color = 'red'>delete</font> </font> </a>
+
+            <li>{{item.EMP_ID}} --- {{item.EMPLOYEE_NAME }} --- {{ item.DEPARTMENT }} --- {{ item.SALARY }} --- {{ item.DOB}} --- {{ item.DOJ }} </li>
+
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
+
+
